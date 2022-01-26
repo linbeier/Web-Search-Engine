@@ -17,7 +17,6 @@ class Comparer():
         for v in l:
             if len(v) >= 2:
                 FileSet1.add(v)
-        print(FileSet1)
 
         l = t.Tokenize(File2)
         FileSet2 = set()
