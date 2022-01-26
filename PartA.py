@@ -9,9 +9,9 @@ class tokenizer():
         tokens = []
         prog = re.compile(r"(?=[ -~])([^A-Za-z0-9@#*&'\s]{1}|[A-Za-z0-9@#*&']+)")
         for line in file:
-            line = line.lower()
             temptoken = prog.findall(line)
             if temptoken:
+                temptoken = [x.lower() for x in temptoken]
                 tokens.extend(temptoken)
         return tokens
 
