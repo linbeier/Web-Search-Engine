@@ -15,14 +15,12 @@ class Comparer():
         l = t.Tokenize(File1)
         FileSet1 = set()
         for v in l:
-            if len(v) >= 2:
-                FileSet1.add(v)
+            FileSet1.add(v)
 
         l = t.Tokenize(File2)
         FileSet2 = set()
         for v in l:
-            if len(v) >= 2:
-                FileSet2.add(v)
+            FileSet2.add(v)
 
         if len(FileSet1) > len(FileSet2):
             for token in FileSet2:

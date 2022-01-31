@@ -7,7 +7,7 @@ class tokenizer():
     # and n represents length of input. Since we only compile regular expression once, the overall time complexity is O(n)
     def Tokenize(self, file):
         tokens = []
-        prog = re.compile(r"(?=[ -~])([^A-Za-z0-9@#*&'\s]{1}|[A-Za-z0-9@#*&']+)")
+        prog = re.compile(r"(?=[ -~])([A-Za-z0-9@#*&']{2,})")
         for line in file:
             temptoken = prog.findall(line)
             if temptoken:
